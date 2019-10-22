@@ -44,8 +44,8 @@ const buildRestaurantSearchForm = () => {
     <section class="search-results"></section>
     `
   
-    const searchContainerDiv = document.querySelector("#container")
-    searchContainerDiv.innerHTML = restaurantSearchForm
+    const searchContainerDiv = document.querySelector("#search-container")
+    searchContainerDiv.innerHTML += restaurantSearchForm
 }
     
 
