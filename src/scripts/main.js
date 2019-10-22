@@ -17,3 +17,4 @@ parksBuildAndAppendSearchForm()
 
 
 // ***** CONCERTS (Cassie) ***** //
+concertsBuildAndAppendSearchForm()

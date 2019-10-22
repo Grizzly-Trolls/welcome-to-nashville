@@ -19,6 +19,6 @@ const parksAppToken = 'ugIaEbRINQ1cZqNiOz4F3ib4z';
 
 // ***** CONCERTS (Cassie) ***** //
 
-
+const ticketmaster_key = "tJwxkA26POUHIv0ZeNFFRP8Tkc9GxbQJ"
 
 
