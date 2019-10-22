@@ -51,9 +51,7 @@ const buildRestaurantSearchForm = () => {
 
     
 
-<<<<<<< HEAD
 // ***** CONCERTS (Cassie) ***** //
-=======
 
 
 
@@ -70,4 +68,3 @@ const concertsBuildAndAppendSearchForm = function () {
     const searchContainerDiv = document.querySelector("#search-container")
     searchContainerDiv.innerHTML += concertsSearchForm
 }
->>>>>>> master
