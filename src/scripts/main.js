@@ -6,7 +6,8 @@ parksBuildAndAppendSearchForm()
 
 // ***** MEETUPS (Caroline) ***** //
 
-
+buildAndAppendEventbriteSearchForm()
+// attachEventListenerToSearchButton()
 
 
 
