@@ -1,7 +1,7 @@
 // ***** PARKS (Shawna) ***** //
 
 
-
+parksBuildAndAppendSearchForm()
 
 
 // ***** MEETUPS (Caroline) ***** //
@@ -17,3 +17,4 @@
 
 
 // ***** CONCERTS (Cassie) ***** //
+concertsBuildAndAppendSearchForm()
