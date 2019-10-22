@@ -17,3 +17,4 @@ buildRestaurantSearchForm()
 
 
 // ***** CONCERTS (Cassie) ***** //
+concertsBuildAndAppendSearchForm()
