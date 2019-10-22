@@ -12,7 +12,7 @@
 
 // ***** RESTAURANTS (Joseph) ***** //
 
-
+buildRestaurantSearchForm()
 
 
 
