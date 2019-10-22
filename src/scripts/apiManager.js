@@ -25,7 +25,6 @@ const searchParks = (dropDownItem) => {
 
 // ***** CONCERTS (Cassie) ***** //
 
-// Assigning the base api URL to variable "ticketmaster_base_url"
 const ticketmaster_base_url = "https://app.ticketmaster.com/discovery/v2/"
 
 // Function that accepts user search input as an argument. Fetch does a GET call on a URL string to get back data. Uses api base url, ticketmaster api key and the user input.
