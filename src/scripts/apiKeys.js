@@ -12,7 +12,7 @@ const parksAppToken = 'ugIaEbRINQ1cZqNiOz4F3ib4z';
 
 
 // ***** RESTAURANTS (Joseph) ***** //
-
+const restaurantKey = "7707b44a119207cb30d8ac5ace0d0b6d"
 
 
 

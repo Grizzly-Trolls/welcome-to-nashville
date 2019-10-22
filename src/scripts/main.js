@@ -12,7 +12,7 @@ parksBuildAndAppendSearchForm()
 
 // ***** RESTAURANTS (Joseph) ***** //
 
-
+buildRestaurantSearchForm()
 
 
 
