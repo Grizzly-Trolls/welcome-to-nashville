@@ -6,7 +6,8 @@
 
 // ***** MEETUPS (Caroline) ***** //
 
-
+buildAndAppendEventbriteSearchForm()
+attachEventListenerToSearchButton()
 
 
 
