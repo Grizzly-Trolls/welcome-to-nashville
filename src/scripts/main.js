@@ -13,8 +13,9 @@ attachEventListenerToSearchButton()
 
 // ***** RESTAURANTS (Joseph) ***** //
 
-
+buildRestaurantSearchForm()
 
 
 
 // ***** CONCERTS (Cassie) ***** //
+concertsBuildAndAppendSearchForm()
