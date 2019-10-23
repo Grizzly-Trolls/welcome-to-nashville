@@ -6,29 +6,19 @@
 
 // ***** MEETUPS (Caroline) ***** //
 
-const buildEventbriteHtml = event => {
-  return `
+
+const displayEventbriteResultsHtml = (event => {
+  const eventbriteResultsHtml = `
     <article>
-      <h4>${event.name.text}</h4>
-      <p>${event.venue.name}</p>
-      <p>${event.description.name}</p>
-    </article>
+      <h4>${event.name.text}</h4> 
+      <h4>${event.venue.name}</h4>
+      <button id="eventbriteSaveBTN">Save</button>
+      </article>
   `
-}
-
-
-const displayEventbriteHtml = events => {
-  let eventResultsHtml = ""
-  events.forEach(event => {
-    let eventHtml = buildEventbriteHtml(event)
-    eventResultsHtml += eventHtml
-  });
-
-  // const searchResultsSection = document.querySelector(".search-results")
-  // searchResultsSection.innerHTML = eventResultsHtml
-}
-
-
+  const eventbriteResults = document.querySelector("#eventbrite-results-container")
+  eventbriteResults.innerHTML += eventbriteResultsHtml
+})
+ 
 
 // ***** RESTAURANTS (Joseph) ***** //
 

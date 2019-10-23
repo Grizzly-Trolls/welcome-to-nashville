@@ -34,13 +34,12 @@ const parksBuildAndAppendSearchForm = function () {
 const buildAndAppendEventbriteSearchForm = () => {
     const eventbriteSearchForm = `
     <section class="search-form">
-      <input type="text" placeholder="meetups by topic">
-      <button id = "search-button">Search</button>
+      <input id="eventbriteInput" type="text" placeholder="meetups by topic">
+      <button id ="eventbrite-search-button">Search</button>
     </section>
-    <section class="search-results"></section>
     `
     // Grabs reference to <div> on the dom and renders eventbrightSearchForm to dom //
-    const searchContainerDiv = document.querySelector("#search-container")
+    const searchContainerDiv = document.querySelector("#eventbrite-search-container")
     searchContainerDiv.innerHTML += eventbriteSearchForm
   }
 
@@ -59,6 +58,8 @@ const buildRestaurantSearchForm = () => {
     const searchContainerDiv = document.querySelector("#search-container")
     searchContainerDiv.innerHTML += restaurantSearchForm
 }
+
+
     
 
     
