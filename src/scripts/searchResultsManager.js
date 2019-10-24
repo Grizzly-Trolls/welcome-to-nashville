@@ -6,16 +6,19 @@
 
 // ***** MEETUPS (Caroline) ***** //
 
-const buildEventbriteHtml = event => {
-  return `
-    <article>
-      <h4>${event.name.text}</h4>
-      <p>${event.venue.name}</p>
-      <p>${event.description.name}</p>
-    </article>
-  `
-}
 
+const displayEventbriteResultsHtml = (events => {
+  const eventbriteResultsHtml = `
+      <article>
+        <h4>${events.name.text}</h4>
+        <p>${events.venue.name}</p>
+        <p>${events.venue.address.address_1}</p>
+        <button class="eventbriteSaveBTN">Save</button>
+      </article>
+      `
+      const eventbriteResults = document.querySelector("#results-container")
+      eventbriteResults.innerHTML += eventbriteResultsHtml
+})
 
 const displayEventbriteHtml = events => {
   let eventResultsHtml = ""
@@ -23,11 +26,27 @@ const displayEventbriteHtml = events => {
     let eventHtml = buildEventbriteHtml(event)
     eventResultsHtml += eventHtml
   });
-
+  
   const searchResultsSection = document.querySelector(".search-results")
   searchResultsSection.innerHTML = eventResultsHtml
 }
 
+const displayEventbriteItinerary = (name, venue, address) => {
+  let eventbriteItineraryHtml = ` 
+      <h4>Name of Event: ${name}</h4>
+      <h4>Venue Name: ${venue}</h4>
+      <h4>Venue address: ${address}</h4>
+    `
+    const eventbriteItinerary = document.querySelector("#itinerary-container")
+    const itineraryEventsContainer = document.querySelector("#itinerary-events-container")
+    if (itineraryEventsContainer === null) {
+      eventbriteItinerary.innerHTML = `<article id="itinerary-events-container">
+      ${eventbriteItineraryHtml}
+      </article>`
+    } else {
+      itineraryEventsContainer.innerHTML = eventbriteItineraryHtml
+    }
+}
 
 
 // ***** RESTAURANTS (Joseph) ***** //

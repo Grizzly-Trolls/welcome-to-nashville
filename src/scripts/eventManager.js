@@ -7,31 +7,47 @@
 // ***** MEETUPS (author: Caroline Brownlee) ***** //
 
 // Function that reads user input value in search field (passing inputField.value as an argument) and returns the fetch call from the API, which lives in searchEventbrite variable from apiManager.js. The function then iterates over the Eventbrite array in the promise, then for each event invokes the displayEventbrightHtml function from searchResultsManager.js, which takes a single event as an argument.
-
-// const handleEventbriteSearch = event => {
-//     // console.log(event)
-//     const inputField = document.querySelector("input")
-//     console.log(inputField.value)
+const handleEventbriteSearch = () => {
+    const inputField = document.querySelector("#eventbriteInput")
+    console.log(inputField)
+    searchEventbrite(inputField.value)
+    // promise
+    .then(response => {
+      console.log(response)
+      response.events.forEach(event => {
+          console.log(event)
+          displayEventbriteResultsHtml(event)
+          inputField.value = ""
+      });
+    })
+}       
   
-//     searchEventbrite(inputField.value)
-//     // promise
-//     .then(response => {
-//       console.log(response)
-//       response.events.forEach(event => {
-//           console.log(event)
-//           displayEventbriteHtml(event)
-//           inputField.value = ""
-//       });
-//     })
-
-// }       
-
-// Function that attaches event listener to the search button from eventbriteSearchForm, which lives in the buildAndAppendEventbriteSearchForm function from searchFormManager.js, and on click invokes handleEventbriteSearch function which takes a single event as an argument. //
-
-  const attachEventListenerToSearchButton = () => {
-    const searchButton = document.getElementById("search-button")
-    // searchButton.addEventListener("click", handleEventbriteSearch(event))
+// Function that attaches event listener to the search button and calls handleEventbrite function above. 
+  const eventbriteSearchButton = () => {
+    const eventbriteSearch = document.querySelector("#eventbrite-search-button")
+    eventbriteSearch.addEventListener("click", event => {
+      // clears container after each search button is hit
+      const resultsContainer = document.querySelector("#results-container")
+      resultsContainer.innerHTML = ""
+      handleEventbriteSearch(event)
+    })
   }
+// Attaches event listener to the results container on the dom, targets the save button on click, and captures the corresponding object.
+// The displayEventbriteItinerary lives in searchResultsManager.js and, when invoked, prints the name, venue, and address to the dom in the itinerary container.
+    const eventbriteResults = document.querySelector("#results-container")
+    eventbriteResults.addEventListener("click", event => {
+      if (event.target.tagName === 'BUTTON') {
+        const button = event.target
+        const eventVenueAddress = button.previousElementSibling
+        const eventVenue = eventVenueAddress.previousElementSibling
+        const nameOfEvent = eventVenue.previousElementSibling
+        let name = nameOfEvent.innerText
+        let venue = eventVenue.innerText
+        let address = eventVenueAddress.innerText
+        displayEventbriteItinerary(name, venue, address)
+      }
+    })
+  
 
 // ***** RESTAURANTS (Joseph) ***** //
 
