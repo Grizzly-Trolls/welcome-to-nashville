@@ -59,8 +59,14 @@ const attachEventListenerToRestaurantSearchButton = (event) => {
 }
 
 const restaurantSaveButton = document.querySelector("#restaurantSaveButton")
+const itineraryDiv = document.querySelector("#itinerary-container")
+
+const addInfoToItinerarySection = () => {
+  restaurantSaveButton.innerHTML = itineraryDiv
+  console.log("itinerary")
+}
 const eventListenerToRestaurantSaveButton = (event) => {
-  restaurantSaveButton.addEventListener("click",buildRestaurantHTML)
+  restaurantSaveButton.addEventListener("click",addInfoToItinerarySection)
   console.log("event", event)
 }
 // ***** CONCERTS (Cassie) ***** //
