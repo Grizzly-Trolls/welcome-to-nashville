@@ -38,7 +38,7 @@
 const restaurantHandleSearch = event => {
   console.log("hopefully this will work")
     const inputField = document.querySelector("#restaurant-input")
-    // console.log("", inputField.value)
+    console.log("", inputField.value)
 
     searchRestaurants(inputField.value)
     .then(response => {
@@ -58,9 +58,15 @@ const attachEventListenerToRestaurantSearchButton = (event) => {
     searchButton.addEventListener("click", restaurantHandleSearch)
 }
 
+const restaurantSaveButton = document.querySelector("#restaurantSaveButton")
+const itineraryDiv = document.querySelector("#itinerary-container")
+
+const addInfoToItinerarySection = () => {
+  restaurantSaveButton.innerHTML = itineraryDiv
+  console.log("itinerary")
+}
 const eventListenerToRestaurantSaveButton = (event) => {
-  const restaurantSaveButton = document.querySelector("#restaurantSaveButton")
-  restaurantSaveButton.addEventListener("click",buildRestaurantHTML)
+  restaurantSaveButton.addEventListener("click",addInfoToItinerarySection)
   console.log("event", event)
 }
 // ***** CONCERTS (Cassie) ***** //
