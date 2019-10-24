@@ -8,7 +8,7 @@
 
 // Function that reads user input value in search field (passing inputField.value as an argument) and returns the fetch call from the API, which lives in searchEventbrite variable from apiManager.js. The function then iterates over the Eventbrite array in the promise, then for each event invokes the displayEventbrightHtml function from searchResultsManager.js, which takes a single event as an argument.
 const handleEventbriteSearch = () => {
-    const inputField = document.querySelector("#eventbriteInput").value
+    const inputField = document.querySelector("#eventbriteInput")
     console.log(inputField)
     searchEventbrite(inputField.value)
     // promise
@@ -26,6 +26,9 @@ const handleEventbriteSearch = () => {
   const eventbriteSearchButton = () => {
     const eventbriteSearch = document.querySelector("#eventbrite-search-button")
     eventbriteSearch.addEventListener("click", event => {
+      // clears container after each search button is hit
+      const resultsContainer = document.querySelector("#results-container")
+      resultsContainer.innerHTML = ""
       handleEventbriteSearch(event)
     })
   }
@@ -35,7 +38,6 @@ const handleEventbriteSearch = () => {
     eventbriteResults.addEventListener("click", event => {
       if (event.target.tagName === 'BUTTON') {
         const button = event.target
-        console.log(button)
         const eventVenueAddress = button.previousElementSibling
         const eventVenue = eventVenueAddress.previousElementSibling
         const nameOfEvent = eventVenue.previousElementSibling

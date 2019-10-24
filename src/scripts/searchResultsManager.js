@@ -33,14 +33,19 @@ const displayEventbriteHtml = events => {
 
 const displayEventbriteItinerary = (name, venue, address) => {
   let eventbriteItineraryHtml = ` 
-  <article>
       <h4>Name of Event: ${name}</h4>
       <h4>Venue Name: ${venue}</h4>
       <h4>Venue address: ${address}</h4>
-    </article>
     `
     const eventbriteItinerary = document.querySelector("#itinerary-container")
-    eventbriteItinerary.innerHTML += eventbriteItineraryHtml
+    const itineraryEventsContainer = document.querySelector("#itinerary-events-container")
+    if (itineraryEventsContainer === null) {
+      eventbriteItinerary.innerHTML = `<article id="itinerary-events-container">
+      ${eventbriteItineraryHtml}
+      </article>`
+    } else {
+      itineraryEventsContainer.innerHTML = eventbriteItineraryHtml
+    }
 }
 
 
