@@ -9,11 +9,11 @@
 
 const displayEventbriteResultsHtml = (events => {
   const eventbriteResultsHtml = `
-    <article>
-      <h4>${events.name.text}</h4> 
-      <p>${events.venue.name}</p>
-      <p>${events.venue.address.address_1}</p>
-      <button class="eventbriteSaveBTN">Save</button>
+      <article>
+        <h4>${events.name.text}</h4>
+        <p>${events.venue.name}</p>
+        <p>${events.venue.address.address_1}</p>
+        <button class="eventbriteSaveBTN">Save</button>
       </article>
       `
       const eventbriteResults = document.querySelector("#results-container")
