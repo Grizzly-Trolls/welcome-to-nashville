@@ -7,15 +7,16 @@ parksBuildAndAppendSearchForm()
 // ***** MEETUPS (Caroline) ***** //
 
 buildAndAppendEventbriteSearchForm()
-attachEventListenerToSearchButton()
+// attachEventListenerToSearchButton()
 
 
 
 // ***** RESTAURANTS (Joseph) ***** //
 
 buildRestaurantSearchForm()
-attachEventListenerToRestaurantSearchButton()
 
 
 // ***** CONCERTS (Cassie) ***** //
 concertsBuildAndAppendSearchForm()
+// eventListenerToRestaurantSaveButton()
+attachEventListenerToRestaurantSearchButton()
