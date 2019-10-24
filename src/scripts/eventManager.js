@@ -64,3 +64,38 @@ const eventListenerToRestaurantSaveButton = (event) => {
   console.log("event", event)
 }
 // ***** CONCERTS (Cassie) ***** //
+
+// "event" is here just to indicate that the function is handling an event.
+const handleConcertsSearch = event => {
+  console.log("event", event)
+
+  // Searching the DOM for the first concert-input tag (which gets added to the DOM when the buildAndAppendSearchForm() function runs) and assigning it to variable "inputField"
+  const concertsInputField = document.querySelector("#concert-input")
+
+// Logs what was typed into the search box to the console.
+  console.log("user input", concertsInputField.value)
+
+  // Function call that accepts whatever was typed into the search box as a parameter. searchConcerts is defined in apiManager.js
+  // WE STOPPED HERE!!!!!!!!
+  searchConcerts(concertsInputField.value)
+
+  .then(fetch_call_response => {
+    // console.log(response.recipes)
+
+    // Function call takes in the recipes property of response. Defined on searchResultsManager.js page.
+    displayConcertsHtml(fetch_call_response)
+
+    // Assigns blank string to inputField.value to clear out the search box after all functions have resolved.
+    concertsInputField.value = ""
+  })
+}
+
+// Anonymous function assigned to variable "attachEventListenerToConcertsSearchButton". Called from main.js
+const attachEventListenerToConcertsSearchButton = () => {
+
+// DOM is searched for first id named "concerts-search-button" and assigns it to variable "concertsSearchButton"
+const concertsSearchButton = document.getElementById("concerts-search-button")
+
+// Listens for a click on the "concertsSearchButton" element. When clicked, the function "handleConcertsSearch" is executed. *Can't put parentheses after function name because it would immediately invoke it.
+concertsSearchButton.addEventListener("click", handleConcertsSearch)
+}
