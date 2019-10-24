@@ -37,9 +37,10 @@ const handleEventbriteSearch = () => {
     eventbriteResults.addEventListener("click", event => {
       if (event.target.tagName === 'BUTTON') {
         const button = event.target
-        const nameOfEvent = button.previousElementSibling
-        const eventVenue = nameOfEvent.previousElementSibling
-        const eventVenueAddress = eventVenue.previousElementSibling
+        console.log(button)
+        const eventVenueAddress = button.previousElementSibling
+        const eventVenue = eventVenueAddress.previousElementSibling
+        const nameOfEvent = eventVenue.previousElementSibling
         let name = nameOfEvent.innerText
         let venue = eventVenue.innerText
         let address = eventVenueAddress.innerText
@@ -49,21 +50,33 @@ const handleEventbriteSearch = () => {
   
 
 // ***** RESTAURANTS (Joseph) ***** //
-const restaurantHandleSearch = event => {
-    const inputFeild = document.querySelector("input")
-    console.log("user input", inputFeild.value)
 
-    searchRestaurants(inputFeild.value)
+const restaurantHandleSearch = event => {
+  console.log("hopefully this will work")
+    const inputField = document.querySelector("#restaurant-input")
+    // console.log("", inputField.value)
+
+    searchRestaurants(inputField.value)
     .then(response => {
-        displayRestaurantNameHTML(respone.names)
-        inputFeild.value =""
+      // console.log(response)
+      response.restaurants.forEach(restaurant => {
+        // console.log(restaurant)
+        buildRestaurantHTML(restaurant)
+        inputField.value =""
+      });
+      
     })
 }
 
-const attachEventListenerToSearchButton = () => {
-    const searchButton = document.getElementById("search-button")
+const attachEventListenerToRestaurantSearchButton = (event) => {
+  const searchButton = document.getElementById("restaurant-search-button")
+  // console.log("show up", searchButton)
     searchButton.addEventListener("click", restaurantHandleSearch)
 }
 
-
-// ***** CONCERTS (Cassie) ***** //
+const eventListenerToRestaurantSaveButton = (event) => {
+  const restaurantSaveButton = document.querySelector("#restaurantSaveButton")
+  restaurantSaveButton.addEventListener("click",buildRestaurantHTML)
+  console.log("event", event)
+}
+  // ***** CONCERTS (Cassie) ***** //

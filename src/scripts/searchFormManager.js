@@ -49,14 +49,15 @@ const buildAndAppendEventbriteSearchForm = () => {
 const buildRestaurantSearchForm = () => {
     const restaurantSearchForm = `
     <section class="search-form">
-      <input type="text" placeholder="restaurant by food types">
-      <button id = "search-button">Search</button>
+      <input id="restaurant-input" type="text" placeholder="Restaurant by location">
+      <button id="restaurant-search-button">Search</button>
     </section>
     <section class="search-results"></section>
     `
   
     const searchContainerDiv = document.querySelector("#search-container")
     searchContainerDiv.innerHTML += restaurantSearchForm
+    console.log("test")
 }
 
 
