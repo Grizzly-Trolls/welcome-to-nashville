@@ -1,21 +1,21 @@
 // ***** PARKS (Shawna) ***** //
 
 
-// parksBuildAndAppendSearchForm()
+parksBuildAndAppendSearchForm()
 
 
 // ***** MEETUPS (Caroline) ***** //
 
 buildAndAppendEventbriteSearchForm()
-eventbriteSearchButton() 
 
 
 
 // ***** RESTAURANTS (Joseph) ***** //
 
-// buildRestaurantSearchForm()
+buildRestaurantSearchForm()
 
 
 
 // ***** CONCERTS (Cassie) ***** //
-// concertsBuildAndAppendSearchForm()
+concertsBuildAndAppendSearchForm()
+eventbriteSearchButton() 

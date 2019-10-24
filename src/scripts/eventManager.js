@@ -18,19 +18,36 @@ const handleEventbriteSearch = () => {
       response.events.forEach(event => {
           console.log(event)
           displayEventbriteResultsHtml(event)
+          // displayEventbriteItinerary(event)// call save button function
           inputField.value = ""
       });
     })
 
   }       
-  // Function that attaches event listener to the search button from eventbriteSearchForm, which lives in the buildAndAppendEventbriteSearchForm function from searchFormManager.js, and on click invokes handleEventbriteSearch function which takes a single event as an argument. //
   
+// Function that attaches event listener to the search button 
   const eventbriteSearchButton = () => {
     const eventbriteSearch = document.querySelector("#eventbrite-search-button")
     eventbriteSearch.addEventListener("click", event => {
       handleEventbriteSearch(event)
     })
   }
+// Function that attaches event listener to the save buttons
+  // const eventbriteSaveButton = () => {
+    const eventbriteResults = document.querySelector("#results-container")
+    eventbriteResults.addEventListener("click", event => {
+      if (event.target.tagName === 'BUTTON') {
+        const button = event.target
+        const nameOfEvent = button.previousElementSibling
+        const eventVenue = nameOfEvent.previousElementSibling
+        const eventVenueAddress = eventVenue.previousElementSibling
+        let name = nameOfEvent.innerText
+        let venue = eventVenue.innerText
+        let address = eventVenueAddress.innerText
+        displayEventbriteItinerary(name, venue, address)
+      }
+    })
+  
 
 // ***** RESTAURANTS (Joseph) ***** //
 const restaurantHandleSearch = event => {

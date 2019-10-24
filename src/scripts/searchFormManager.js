@@ -39,7 +39,7 @@ const buildAndAppendEventbriteSearchForm = () => {
     </section>
     `
     // Grabs reference to <div> on the dom and renders eventbrightSearchForm to dom //
-    const searchContainerDiv = document.querySelector("#eventbrite-search-container")
+    const searchContainerDiv = document.querySelector("#search-container")
     searchContainerDiv.innerHTML += eventbriteSearchForm
   }
 
