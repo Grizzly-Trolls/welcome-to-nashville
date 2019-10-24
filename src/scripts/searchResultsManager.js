@@ -24,16 +24,26 @@ const displayEventbriteHtml = events => {
     eventResultsHtml += eventHtml
   });
 
-  // const searchResultsSection = document.querySelector(".search-results")
-  // searchResultsSection.innerHTML = eventResultsHtml
+  const searchResultsSection = document.querySelector(".search-results")
+  searchResultsSection.innerHTML = eventResultsHtml
 }
 
 
 
 // ***** RESTAURANTS (Joseph) ***** //
 
-
-
+const buildRestaurantHTML = (restaurant => {
+  // console.log(restaurant.restaurant)
+  const restaurantDisplayVar = `
+    <article>
+      <h4>${restaurant.restaurant.name}</h4>
+      <h4>${restaurant.restaurant.location.address}</h4>
+      <button id="restaurantSaveButton">SAVE</button>
+    </article>
+    `
+    const restaurantResultsSection = document.querySelector("#results-container")
+    restaurantResultsSection.innerHTML += restaurantDisplayVar
+})
 
 
 // ***** CONCERTS (Cassie) ***** //
