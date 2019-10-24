@@ -71,7 +71,7 @@ const handleConcertsSearch = event => {
     // console.log(response.recipes)
 
     // Function call takes in the recipes property of response. Defined on searchResultsManager.js page.
-    displayConcertsHtml(fetch_call_response._embedded)
+    displayConcertsHtml(fetch_call_response)
 
     // Assigns blank string to inputField.value to clear out the search box after all functions have resolved.
     concertsInputField.value = ""

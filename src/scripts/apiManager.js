@@ -46,6 +46,3 @@ const searchConcerts = (searchInput) => fetch(`${ticketmaster_base_url}events.js
 
 // .then waits for the response to be sent back then turns the response into JSON format. .json() is a method that can be called on a response stream (which was returned by the fetch call)
 .then(response => response.json())
-.then(response => {
-    console.log(response)
-})
