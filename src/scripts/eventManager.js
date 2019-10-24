@@ -32,8 +32,7 @@ const handleEventbriteSearch = () => {
       handleEventbriteSearch(event)
     })
   }
-// Function that attaches event listener to the save buttons
-  // const eventbriteSaveButton = () => {
+//taches event listener to the save buttons and calls 
     const eventbriteResults = document.querySelector("#results-container")
     eventbriteResults.addEventListener("click", event => {
       if (event.target.tagName === 'BUTTON') {
