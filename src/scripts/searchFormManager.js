@@ -62,9 +62,7 @@ const buildRestaurantSearchForm = () => {
 }
     
 
-    
 
-// ***** CONCERTS (Cassie) ***** //
 
 
 
