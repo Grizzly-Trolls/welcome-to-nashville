@@ -58,8 +58,8 @@ const attachEventListenerToRestaurantSearchButton = (event) => {
     searchButton.addEventListener("click", restaurantHandleSearch)
 }
 
+const restaurantSaveButton = document.querySelector("#restaurantSaveButton")
 const eventListenerToRestaurantSaveButton = (event) => {
-  const restaurantSaveButton = document.querySelector("#restaurantSaveButton")
   restaurantSaveButton.addEventListener("click",buildRestaurantHTML)
   console.log("event", event)
 }
