@@ -31,7 +31,7 @@ const searchEventbrite = (searchString) => {
 const apiRestaurantBaseurl ="https://developers.zomato.com/api/v2.1"
 
 
-const searchRestaurants = searchInput => fetch(`${apiRestaurantBaseurl}/search?entity_id=1138&entity_type=city&start=first&sort=rating&apikey=7707b44a119207cb30d8ac5ace0d0b6d`)
+const searchRestaurants = searchInput => fetch(`${apiRestaurantBaseurl}/search?entity_id=1138&entity_type=city&start=first&sort=rating&apikey=7707b44a119207cb30d8ac5ace0d0b6d&q=${searchInput}`)
     .then(response => response.json())
 
 

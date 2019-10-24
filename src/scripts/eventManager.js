@@ -38,7 +38,7 @@
 const restaurantHandleSearch = event => {
   console.log("hopefully this will work")
     const inputField = document.querySelector("#restaurant-input")
-    // console.log("", inputField.value)
+    console.log("", inputField.value)
 
     searchRestaurants(inputField.value)
     .then(response => {
