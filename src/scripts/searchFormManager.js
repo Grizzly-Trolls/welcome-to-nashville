@@ -73,10 +73,9 @@ const buildRestaurantSearchForm = () => {
 const concertsBuildAndAppendSearchForm = function () {
     const concertsSearchForm = `
     <section class="concerts-search-form">
-    <input type="text" placeholder="concerts by genre"> 
+    <input id="concert-input" type="text" placeholder="concerts by genre"> 
     <button id = "concerts-search-button">Search</button>
     </section>
-    <section class="search-results"></section>
     `
     const searchContainerDiv = document.querySelector("#search-container")
     searchContainerDiv.innerHTML += concertsSearchForm
