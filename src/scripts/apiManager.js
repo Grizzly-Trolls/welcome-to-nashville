@@ -1,15 +1,15 @@
 // ***** PARKS (Shawna) ***** //
 
 
-const parksBaseUrl = "https://data.nashville.gov/resource/"
+const parksBaseUrl = "https://data.nashville.gov/resource/74d7-b74t.json?"
 
-const searchParks = (dropDownItem) => {
-    return fetch (`${parksBaseUrl}74d7-b74t.json?${parksAppToken}&${dropDownItem}`)
-}
-// const searchRecipes = (searchInput) => { 
-    //     return fetch(`${apiBaseUrl}search?key=${food2ForkKey}&q=${searchInput}`).then(response => response.json());
-    // }
-    
+// the const searchParks is being defined here. it is being called on the eventManager
+
+const searchParks = (selectionValue) => fetch (`${parksBaseUrl}${selectionValue}=Yes`).then(response => response.json())
+
+// .then(response => console.log(response))
+
+// const searchParks = (searchInput) => fetch (`${parksBaseUrl}74d7-b74t.json?${parksAppToken}&${searchInput}`).then(response => response.json())
 
 // ***** MEETUPS (Caroline) ***** //
   
