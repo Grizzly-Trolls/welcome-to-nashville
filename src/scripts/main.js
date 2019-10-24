@@ -1,3 +1,4 @@
+
 // ***** PARKS (Shawna) ***** //
 
 
@@ -17,7 +18,6 @@ buildAndAppendEventbriteSearchForm()
 buildRestaurantSearchForm()
 
 
-
 // ***** CONCERTS (Cassie) ***** //
 concertsBuildAndAppendSearchForm()
 
@@ -28,3 +28,12 @@ concertsBuildAndAppendSearchForm()
 
 attachEventListenerToParksSearchButton() 
 
+
+
+// ******* ATTACHING EVENT LISTENERS *****
+
+
+// Function call to attach event listener to concert search button (eventManager.js)
+attachEventListenerToConcertsSearchButton()
+// eventListenerToRestaurantSaveButton()
+attachEventListenerToRestaurantSearchButton()
