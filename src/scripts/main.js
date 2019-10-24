@@ -16,6 +16,7 @@ buildAndAppendEventbriteSearchForm()
 buildRestaurantSearchForm()
 
 
-
 // ***** CONCERTS (Cassie) ***** //
 concertsBuildAndAppendSearchForm()
+// eventListenerToRestaurantSaveButton()
+attachEventListenerToRestaurantSearchButton()
