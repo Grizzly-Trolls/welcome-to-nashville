@@ -114,10 +114,12 @@ const restaurantHandleSearch = event => {
     })
 }
 
-// const attachEventListenerToSearchButton = () => {
-//     const searchButton = document.getElementById("search-button")
-//     searchButton.addEventListener("click", restaurantHandleSearch)
-// }
+
+const attachEventListenerToRestaurantSearchButton = (event) => {
+  const searchButton = document.getElementById("restaurant-search-button")
+  // console.log("show up", searchButton)
+    searchButton.addEventListener("click", restaurantHandleSearch)
+}
 
 const restaurantSaveButton = document.querySelector("#restaurantSaveButton")
 const itineraryDiv = document.querySelector("#itinerary-container")
