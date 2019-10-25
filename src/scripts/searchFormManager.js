@@ -32,16 +32,15 @@ const parksBuildAndAppendSearchForm = function () {
 // variable holding the function definition to build and append search form for PARKS.
 // Call this function on main.js
 
-// ***** MEETUPS (author: Caroline Brownlee) ***** //
+// ***** MEETUPS (Caroline Brownlee) ***** //
 
 // Function that Renders the Search Input and Search button to the dom when application is first run by the user. Function is called in main.js. Works Oct. 22, 19 //
 const buildAndAppendEventbriteSearchForm = () => {
   const eventbriteSearchForm = `
     <section class="search-form">
-      <input type="text" placeholder="meetups by topic">
-      <button id = "search-button">Search</button>
+      <input id="eventbriteInput" type="text" placeholder="meetups by topic">
+      <button id ="eventbrite-search-button">Search</button>
     </section>
-    <section class="search-results"></section>
     `
   // Grabs reference to <div> on the dom and renders eventbrightSearchForm to dom //
   const searchContainerDiv = document.querySelector("#search-container")
@@ -50,7 +49,7 @@ const buildAndAppendEventbriteSearchForm = () => {
 
 
 
-// ***** RESTAURANTS (Joseph) ***** //
+// ***** RESTAURANTS (Joseph Walker) ***** //
 const buildRestaurantSearchForm = () => {
   const restaurantSearchForm = `
     <section class="search-form">
@@ -63,13 +62,6 @@ const buildRestaurantSearchForm = () => {
   const searchContainerDiv = document.querySelector("#search-container")
   searchContainerDiv.innerHTML += restaurantSearchForm
 }
-
-
-
-
-// ***** CONCERTS (Cassie) ***** //
-
-
 
 // ***** CONCERTS (Cassie) ***** //
 
