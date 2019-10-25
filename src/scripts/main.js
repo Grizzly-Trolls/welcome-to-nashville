@@ -35,5 +35,5 @@ attachEventListenerToParksSearchButton()
 
 // Function call to attach event listener to concert search button (eventManager.js)
 attachEventListenerToConcertsSearchButton()
-eventListenerToRestaurantSaveButton()
+// eventListenerToRestaurantSaveButton()
 attachEventListenerToRestaurantSearchButton()
