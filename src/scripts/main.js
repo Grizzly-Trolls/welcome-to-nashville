@@ -2,6 +2,7 @@
 // ***** PARKS (Shawna) ***** //
 
 
+// function call for building and appending search form (searchFormManager.js)
 parksBuildAndAppendSearchForm()
 
 
@@ -17,9 +18,15 @@ buildRestaurantSearchForm()
 
 
 // ***** CONCERTS (Cassie) ***** //
-
-// Function call for building and appending search form, concerts section (searchFormManager.js). Makes button and search field.
 concertsBuildAndAppendSearchForm()
+
+
+// ********* ATTACHING EVENT LISTENERS *******
+
+// / function call to attach event listener to parks search button (eventManager.js) ***the button and search field were created in the search form on search form manager
+
+attachEventListenerToParksSearchButton() 
+
 
 
 // ******* ATTACHING EVENT LISTENERS *****
@@ -27,6 +34,6 @@ concertsBuildAndAppendSearchForm()
 
 // Function call to attach event listener to concert search button (eventManager.js)
 eventbriteSearchButton()
-attachEventListenerToConcertsSearchButton()
 // eventListenerToRestaurantSaveButton()
 attachEventListenerToRestaurantSearchButton()
+attachEventListenerToConcertsSearchButton()

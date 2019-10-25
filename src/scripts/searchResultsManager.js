@@ -1,6 +1,34 @@
 // ***** PARKS (Shawna) ***** //
 
+// Function definition that adds a HTML string to the DOM. parks is an argument.
 
+// the h4 below is the"Name" portion of what we're bringing back
+
+const buildParksHtml = parks => `
+<article>
+ <h4>${parks.park_name}</h4>
+ <p>
+  Info:
+ </p>
+</article>
+`
+
+// Function definition that takes allRecipes (response.recipes) as an argument. Called on the eventManager.js page
+const displayParksHtml = allParks => {
+ // Declare recipeResultsHtml as an empty string.
+ let parkResultsHtml = ""
+ // .forEach loop loops through allRecipes (response.recipes) array.
+ allParks.forEach(park => {
+   // Variable recipeHtml is assigned to the value returned from calling the function buildRecipeHtml.
+   let parkHtml = buildParksHtml(park)
+   // recipeHtml is added to the existing value of recipeResultsHtml.
+   parkResultsHtml += parkHtml
+ });
+ // The DOM is searched for the first class named .search-results and assigns it to a variable.
+ const searchResultsContainer = document.querySelector("#results-container")
+ // The innerHTML (area between tageted HTML tags) of the searchResultsSection is populated with the value of recipeResultsHtml.
+ searchResultsContainer.innerHTML = parkResultsHtml
+}
 
 
 
